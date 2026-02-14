@@ -1,10 +1,4 @@
-Perfect 👍 I understand.
 
-This README is for your **JavaScript folder**, where you’ll push small topic-based projects.
-
-Here’s a clean and professional one 👇
-
----
 
 # 📘 JavaScript Practice Projects
 
