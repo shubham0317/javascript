@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glass Profile Creator</title>
+    <link rel="stylesheet" href="adduser.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Create User Profile</h1>
+
+        <form id="profileForm">
+    
+            <div class="form-group">
+                <label for="username">Name</label>
+                <input type="text" id="username" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="role">User Role</label>
+                <input type="text" id="role" placeholder="Enter role (e.g Developer)">
+            </div>
+
+            <div class="form-group">
+                <label for="profilePic">Profile Picture URL</label>
+                <input type="text" id="profilePic" placeholder="Paste image link here">
+            </div>
+
+            <button type="submit">Create Profile</button>
+
+        </form>
+
+        <div class="profiles">
+            
+            <h2>Created Profiles</h2>
+            
+        </div>
+
+    </div>
+<script src="adduser.js"></script>
+</body>
+</html>
