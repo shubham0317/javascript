@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern JS Store</title>
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">JS Store</div>
+
+    <div class="header-actions">
+      <input type="text" id="search" placeholder="Search products..." />
+
+      <button id="theme-toggle" class="icon-btn">🌙</button>
+
+      <button id="cart-btn" class="cart-btn">
+        🛒
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h3>Filters</h3>
+
+      <div class="filter-group">
+        <label>Category</label>
+        <select id="category-filter">
+          <option value="all">All</option>
+          <option value="electronics">Electronics</option>
+          <option value="books">Books</option>
+          <option value="accessories">Accessories</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Sort By</label>
+        <select id="sort-filter">
+          <option value="default">Default</option>
+          <option value="price-low">Price: Low → High</option>
+          <option value="price-high">Price: High → Low</option>
+        </select>
+      </div>
+
+      <button id="clear-filters" class="btn-outline full">Clear Filters</button>
+    </aside>
+
+    <!-- PRODUCTS -->
+    <section class="products">
+      <div id="loading" class="loading hidden">Loading products...</div>
+      <div id="empty-products" class="empty-state hidden">No products found.</div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- CART SIDEBAR -->
+  <div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart" class="icon-btn">✖</button>
+    </div>
+
+    <ul id="cart-items" class="cart-items"></ul>
+
+    <div id="empty-cart" class="empty-state">Your cart is empty.</div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        Total: ₹<span id="cart-total">0</span>
+      </div>
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal Overlay -->
+<div id="checkout-modal" class="modal hidden">
+  <div class="modal-content">
+    
+  </div>
+</div>
+
+  <!-- OVERLAY -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast hidden">
+    Order Placed Successfully
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
